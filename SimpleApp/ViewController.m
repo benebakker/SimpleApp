@@ -10,19 +10,28 @@
 
 @interface ViewController ()
 
+@property NSInteger theCount;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // set the counter to zero when the view loads
+    self.theCount = 0;
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)buttonClicked:(id)sender{
+    _theCount=_theCount+1;
+    self.counterLabel.text=[NSString stringWithFormat:@"%ld", (long)self.theCount];
 }
 
 
