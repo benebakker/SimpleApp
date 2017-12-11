@@ -21,8 +21,8 @@
     
     // set the counter to zero when the view loads
     self.theCount = 0;
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -30,9 +30,10 @@
 }
 
 -(IBAction)buttonClicked:(id)sender{
-    _theCount=_theCount+1;
+    NSLog(@"the button was pressed.");
+    
+    self.theCount++;
     self.counterLabel.text=[NSString stringWithFormat:@"%ld", (long)self.theCount];
 }
-
 
 @end
