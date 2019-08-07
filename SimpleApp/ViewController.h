@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) IBOutlet UILabel *counterLabel;
+@property (nonatomic) UIButton *theButton;
 
 @end
-
